@@ -1,0 +1,1 @@
+/usr/bin/cc   -fPIC -fvisibility=hidden -O3 -DNDEBUG   CMakeFiles/tjbench-static.dir/tjbench.c.o CMakeFiles/tjbench-static.dir/tjutil.c.o  -o tjbench-static  -L/usr/local/neuware/lib64 -rdynamic libturbojpeg.a -lm -Wl,-rpath,/usr/local/neuware/lib64 

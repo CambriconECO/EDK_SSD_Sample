@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+9e04c6cebb2c34593a7eae61e0fccb3f 3rdparty/libjpeg-turbo/CMakeFiles/croptest
+f92d40af4f42e19aa438a03bbe60e17c 3rdparty/libjpeg-turbo/CMakeFiles/testclean
+8003b299e95b17bbe0b2135eb240c769 3rdparty/libjpeg-turbo/CMakeFiles/tjtest

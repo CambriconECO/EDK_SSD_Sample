@@ -1,0 +1,1 @@
+/usr/bin/cc   -fPIC -fvisibility=hidden -O3 -DNDEBUG   CMakeFiles/jpegtran-static.dir/jpegtran.c.o CMakeFiles/jpegtran-static.dir/cdjpeg.c.o CMakeFiles/jpegtran-static.dir/rdswitch.c.o CMakeFiles/jpegtran-static.dir/transupp.c.o  -o jpegtran-static  -L/usr/local/neuware/lib64 -rdynamic libjpeg.a -Wl,-rpath,/usr/local/neuware/lib64 

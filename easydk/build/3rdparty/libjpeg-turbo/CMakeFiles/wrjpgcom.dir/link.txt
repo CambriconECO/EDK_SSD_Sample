@@ -1,0 +1,1 @@
+/usr/bin/cc   -fPIC -fvisibility=hidden -O3 -DNDEBUG   CMakeFiles/wrjpgcom.dir/wrjpgcom.c.o  -o wrjpgcom  -L/usr/local/neuware/lib64 -rdynamic 

@@ -1,0 +1,1 @@
+/usr/bin/cc   -fPIC -fvisibility=hidden -O3 -DNDEBUG   CMakeFiles/tjunittest-static.dir/tjunittest.c.o CMakeFiles/tjunittest-static.dir/tjutil.c.o CMakeFiles/tjunittest-static.dir/md5/md5.c.o CMakeFiles/tjunittest-static.dir/md5/md5hl.c.o  -o tjunittest-static  -L/usr/local/neuware/lib64 -rdynamic libturbojpeg.a -Wl,-rpath,/usr/local/neuware/lib64 

@@ -1,0 +1,120 @@
+Performing C SOURCE FILE Test RIGHT_SHIFT_IS_UNSIGNED failed with the following output:
+Change Dir: /workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a6190/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a6190.dir/build.make CMakeFiles/cmTC_a6190.dir/build
+make[1]: Entering directory '/workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a6190.dir/src.c.o
+/usr/bin/cc    -fPIC -fvisibility=hidden -DRIGHT_SHIFT_IS_UNSIGNED   -o CMakeFiles/cmTC_a6190.dir/src.c.o   -c /workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a6190
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6190.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -fvisibility=hidden -DRIGHT_SHIFT_IS_UNSIGNED    CMakeFiles/cmTC_a6190.dir/src.c.o  -o cmTC_a6190 -rdynamic 
+make[1]: Leaving directory '/workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+      #include <stdio.h>
+      #include <stdlib.h>
+      int is_shifting_signed (long arg) {
+        long res = arg >> 4;
+        if (res == -0x7F7E80CL)
+          return 1; /* right shift is signed */
+        /* see if unsigned-shift hack will fix it. */
+        /* we can't just test exact value since it depends on width of long... */
+        res |= (~0L) << (32-4);
+        if (res == -0x7F7E80CL)
+          return 0; /* right shift is unsigned */
+        printf("Right shift isn't acting as I expect it to.\n");
+        printf("I fear the JPEG software will not work at all.\n\n");
+        return 0; /* try it with unsigned anyway */
+      }
+      int main (void) {
+        exit(is_shifting_signed(-0x7F7E80B1L));
+      }
+Performing C SOURCE FILE Test __CHAR_UNSIGNED__ failed with the following output:
+Change Dir: /workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_64b92/fast"
+/usr/bin/make -f CMakeFiles/cmTC_64b92.dir/build.make CMakeFiles/cmTC_64b92.dir/build
+make[1]: Entering directory '/workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_64b92.dir/src.c.o
+/usr/bin/cc    -fPIC -fvisibility=hidden -D__CHAR_UNSIGNED__   -o CMakeFiles/cmTC_64b92.dir/src.c.o   -c /workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_64b92
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64b92.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -fvisibility=hidden -D__CHAR_UNSIGNED__    CMakeFiles/cmTC_64b92.dir/src.c.o  -o cmTC_64b92 -rdynamic 
+make[1]: Leaving directory '/workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+int main(void) { return ((char) -1 < 0); }
+Looking for a ASM_NASM compiler failed with the following output:
+-- The ASM_NASM compiler identification is unknown
+-- Didn't find assembler
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_ASM_NASM_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "ASM_NASM" or the CMake cache entry CMAKE_ASM_NASM_COMPILER to the
+  full path to the compiler, or to the compiler name if it is in the PATH.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/3rdparty/libjpeg-turbo/simd/CMakeFiles/CheckASM_NASM/CMakeFiles/CMakeOutput.log".
+See also "/workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/3rdparty/libjpeg-turbo/simd/CMakeFiles/CheckASM_NASM/CMakeFiles/CMakeError.log".
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d2817/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d2817.dir/build.make CMakeFiles/cmTC_d2817.dir/build
+make[1]: Entering directory '/workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d2817.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fPIC -fvisibility=hidden -fvisibility=default    -o CMakeFiles/cmTC_d2817.dir/CheckSymbolExists.c.o   -c /workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_d2817
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2817.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -fvisibility=hidden -fvisibility=default     CMakeFiles/cmTC_d2817.dir/CheckSymbolExists.c.o  -o cmTC_d2817 -rdynamic 
+CMakeFiles/cmTC_d2817.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d2817.dir/build.make:97: recipe for target 'cmTC_d2817' failed
+make[1]: *** [cmTC_d2817] Error 1
+make[1]: Leaving directory '/workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d2817/fast' failed
+make: *** [cmTC_d2817/fast] Error 2
+
+File /workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4b9bb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4b9bb.dir/build.make CMakeFiles/cmTC_4b9bb.dir/build
+make[1]: Entering directory '/workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4b9bb.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -fvisibility=hidden -fvisibility=default -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4b9bb.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4b9bb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b9bb.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -fvisibility=hidden -fvisibility=default -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_4b9bb.dir/CheckFunctionExists.c.o  -o cmTC_4b9bb -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4b9bb.dir/build.make:97: recipe for target 'cmTC_4b9bb' failed
+make[1]: *** [cmTC_4b9bb] Error 1
+make[1]: Leaving directory '/workspace/zhanghaochong/mlu270-1.5.0/Cambricon-MLU270/easydk_demo/easydk/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4b9bb/fast' failed
+make: *** [cmTC_4b9bb/fast] Error 2
+
+
